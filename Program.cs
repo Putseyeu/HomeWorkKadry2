@@ -124,7 +124,6 @@ namespace HomeWorkKadry
                         surnameIsFind = true;
                     }
                 }
-
                 if (surnameIsFind == false)
                 {
                     Console.WriteLine($"Особа с фамилией {surname} досье не найдена.");

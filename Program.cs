@@ -56,22 +56,6 @@ namespace HomeWorkKadry
             AppointArray(ref listName, ref listOfProfessions, tempListName, tempListOfProfessions);
         }
 
-        static void ShowDossier(string[] listName, string[] listOfProfessions)
-        {
-            if (listName.Length == 0)
-            {
-                Console.WriteLine("Досье не заполнено.");
-            }
-            else
-            {
-                for (int i = 0; i < listName.Length; i++)
-                {
-                    Console.WriteLine($"{i + 1}: {listName[i]} - {listOfProfessions[i]}");
-                }
-                Console.WriteLine();
-            }
-        }
-
         static void DeleteName(ref string[] listName, ref string[] listOfProfessions)
         {
             if (listName.Length == 0)
@@ -99,6 +83,22 @@ namespace HomeWorkKadry
                 AppointArray(ref listName, ref listOfProfessions, tempListName, tempListOfProfessions);
             }
         }
+
+        static void ShowDossier(string[] listName, string[] listOfProfessions)
+        {
+            if (listName.Length == 0)
+            {
+                Console.WriteLine("Досье не заполнено.");
+            }
+            else
+            {
+                for (int i = 0; i < listName.Length; i++)
+                {
+                    Console.WriteLine($"{i + 1}: {listName[i]} - {listOfProfessions[i]}");
+                }
+                Console.WriteLine();
+            }
+        }        
 
         static void SearchSurname(string[] listName, string[] listOfProfessions)
         {

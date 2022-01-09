@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeWorkKadry
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             string[] listName = new string[0];
@@ -54,10 +51,9 @@ namespace HomeWorkKadry
             }
             Console.WriteLine("Добавитье ФИО в досье.");
             tempListName[tempListName.Length - 1] = Console.ReadLine();
-            listName = tempListName;
             Console.WriteLine("Добавитье профессию в досье.");
             tempListOfProfessions[tempListOfProfessions.Length - 1] = Console.ReadLine();
-            listOfProfessions = tempListOfProfessions;
+            AppointArray(ref listName, ref listOfProfessions, tempListName, tempListOfProfessions);
         }
 
         static void ShowDossier(string[] listName, string[] listOfProfessions)
@@ -100,8 +96,7 @@ namespace HomeWorkKadry
                     tempListName[i - 1] = listName[i];
                     tempListOfProfessions[i - 1] = listOfProfessions[i];
                 }
-                listName = tempListName;
-                listOfProfessions = tempListOfProfessions;
+                AppointArray(ref listName, ref listOfProfessions, tempListName, tempListOfProfessions);
             }
         }
 
@@ -129,6 +124,12 @@ namespace HomeWorkKadry
                     Console.WriteLine($"Особа с фамилией {surname} досье не найдена.");
                 }
             }
+        }
+
+        static void AppointArray(ref string[] listName, ref string[] listOfProfessions, string[] tempListName, string[] tempListOfProfessions)
+        {
+            listName = tempListName;
+            listOfProfessions = tempListOfProfessions;
         }
     }
 }
